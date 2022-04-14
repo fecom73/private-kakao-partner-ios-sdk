@@ -1,0 +1,1 @@
+# private-kakao-partner-ios-sdk
