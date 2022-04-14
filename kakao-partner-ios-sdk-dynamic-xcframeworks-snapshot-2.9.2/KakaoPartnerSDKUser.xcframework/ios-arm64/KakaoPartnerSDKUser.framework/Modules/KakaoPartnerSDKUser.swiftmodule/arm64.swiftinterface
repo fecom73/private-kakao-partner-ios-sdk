@@ -1,0 +1,92 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KakaoPartnerSDKUser
+import Alamofire
+import Foundation
+import KakaoPartnerSDKAuth
+import KakaoPartnerSDKCommon
+@_exported import KakaoPartnerSDKUser
+import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKUser
+import Swift
+import _Concurrency
+public struct PartnerUser : Swift.Codable {
+  public let id: Swift.Int64?
+  public let properties: [Swift.String : Swift.String]?
+  public let kakaoAccount: KakaoPartnerSDKUser.PartnerAccount?
+  public let groupUserToken: Swift.String?
+  public let connectedAt: Foundation.Date?
+  public let synchedAt: Foundation.Date?
+  public let hasSignedUp: Swift.Bool?
+  public let forPartner: KakaoPartnerSDKUser.ForPartner?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PartnerAccount : Swift.Codable {
+  public let profileNeedsAgreement: Swift.Bool?
+  public let profileNicknameNeedsAgreement: Swift.Bool?
+  public let profileImageNeedsAgreement: Swift.Bool?
+  public let profile: KakaoSDKUser.Profile?
+  public let nameNeedsAgreement: Swift.Bool?
+  public let name: Swift.String?
+  public let emailNeedsAgreement: Swift.Bool?
+  public let isEmailValid: Swift.Bool?
+  public let isEmailVerified: Swift.Bool?
+  public let email: Swift.String?
+  public let ageRangeNeedsAgreement: Swift.Bool?
+  public let ageRange: KakaoSDKUser.AgeRange?
+  public let birthyearNeedsAgreement: Swift.Bool?
+  public let birthyear: Swift.String?
+  public let birthdayNeedsAgreement: Swift.Bool?
+  public let birthday: Swift.String?
+  public let birthdayType: KakaoSDKUser.BirthdayType?
+  public let genderNeedsAgreement: Swift.Bool?
+  public let gender: KakaoSDKUser.Gender?
+  public let phoneNumberNeedsAgreement: Swift.Bool?
+  public let phoneNumber: Swift.String?
+  public let ciNeedsAgreement: Swift.Bool?
+  public let ci: Swift.String?
+  public let ciAuthenticatedAt: Foundation.Date?
+  public let legalNameNeedsAgreement: Swift.Bool?
+  public let legalName: Swift.String?
+  public let legalBirthDateNeedsAgreement: Swift.Bool?
+  public let legalBirthDate: Swift.String?
+  public let legalGenderNeedsAgreement: Swift.Bool?
+  public let legalGender: KakaoSDKUser.Gender?
+  public let isKoreanNeedsAgreement: Swift.Bool?
+  public let isKorean: Swift.Bool?
+  public let accountCreationDateNeedsAgreement: Swift.Bool?
+  public let accountCreationDate: Swift.String?
+  public let serviceUserId: Swift.Int64?
+  public let unificationStatus: Swift.Bool?
+  public let isKakaotalkUser: Swift.Bool?
+  public let displayId: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ForPartner : Swift.Codable {
+  public let uuid: Swift.String?
+  public let remainingInviteCount: Swift.Int?
+  public let remainingGroupMsgCount: Swift.Int?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension KakaoSDKUser.UserApi {
+  final public func loginWithKakaoAccount(accountParameters: [Swift.String : Swift.String], completion: @escaping (KakaoSDKAuth.OAuthToken?, Swift.Error?) -> Swift.Void)
+  final public func meForPartner(propertyKeys: [Swift.String]? = nil, secureResource: Swift.Bool = true, completion: @escaping (KakaoPartnerSDKUser.PartnerUser?, Swift.Error?) -> Swift.Void)
+  final public func signupForPartner(properties: [Swift.String : Swift.String]? = nil, completion: @escaping (Swift.Int64?, Swift.Error?) -> Swift.Void)
+  final public func ageAuthInfo(ageLimit: Swift.Int? = nil, propertyKeys: [Swift.String]? = nil, completion: @escaping (KakaoPartnerSDKUser.AgeAuthInfo?, Swift.Error?) -> Swift.Void)
+  final public func upgradeScopes(scopes: [Swift.String], guardianToken: Swift.String? = nil, completion: @escaping (KakaoSDKUser.ScopeInfo?, Swift.Error?) -> Swift.Void)
+}
+public struct AgeAuthInfo : Swift.Codable {
+  public let id: Swift.Int64?
+  public let authLevel: KakaoPartnerSDKAuth.AuthLevel?
+  public let authLevelCode: Swift.Int?
+  public let bypassAgeLimit: Swift.Bool?
+  public let authenticatedAt: Foundation.Date?
+  public let ciNeedsAgreement: Swift.Bool?
+  public let ci: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}

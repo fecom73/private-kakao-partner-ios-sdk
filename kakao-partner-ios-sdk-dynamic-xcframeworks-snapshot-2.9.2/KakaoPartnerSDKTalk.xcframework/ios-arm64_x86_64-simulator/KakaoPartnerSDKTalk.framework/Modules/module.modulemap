@@ -1,0 +1,11 @@
+framework module KakaoPartnerSDKTalk {
+  umbrella header "KakaoPartnerSDKTalk.h"
+
+  export *
+  module * { export * }
+}
+
+module KakaoPartnerSDKTalk.Swift {
+    header "KakaoPartnerSDKTalk-Swift.h"
+    requires objc
+}

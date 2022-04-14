@@ -1,0 +1,11 @@
+framework module KakaoPartnerSDKUser {
+  umbrella header "KakaoPartnerSDKUser.h"
+
+  export *
+  module * { export * }
+}
+
+module KakaoPartnerSDKUser.Swift {
+    header "KakaoPartnerSDKUser-Swift.h"
+    requires objc
+}
