@@ -33,7 +33,7 @@ let package = Package(
     dependencies: [
        .package(name: "KakaoOpenSDK",
                  url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
-                 .exact("2.9.1")
+                 .exact("2.9.2")
                 )
     ],
     targets: [
