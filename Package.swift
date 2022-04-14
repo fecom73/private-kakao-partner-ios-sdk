@@ -30,9 +30,12 @@ let package = Package(
             name: "KakaoPartnerSDKFriend",
             targets: ["KakaoPartnerSDKFriend"])
     ],
-//    dependencies: [
-//        .package(name: "KakaoOpenSDK", path: "../private-kakao-ios-sdk")
-//    ],
+    dependencies: [
+       .package(name: "KakaoOpenSDK",
+                 url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
+                 .exact("2.9.1")
+                )
+    ],
     targets: [
         .binaryTarget(name: "KakaoPartnerSDKCommon",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKCommon_xcframework.zip",
