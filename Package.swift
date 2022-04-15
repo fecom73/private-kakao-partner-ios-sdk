@@ -51,7 +51,7 @@ let package = Package(
         ),
         .binaryTarget(name: "KakaoPartnerSDKCommon",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKCommon_xcframework.zip",
-                      checksum:"f08fdd6a726b8b4959edecef278d86ca0284c67350ed84e9c289507453ae7833"
+                      checksum:"a30738fe02a4de972789328e46d01a884d0b9a9a8fcfe19d09379731a98e8748"
         ),
         .target(name:"KakaoPartnerSDKAuthTarget",
             dependencies: [
@@ -62,7 +62,7 @@ let package = Package(
         ),
         .binaryTarget(name:"KakaoPartnerSDKAuth",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKAuth_xcframework.zip",
-                      checksum:"f8efce11c74a4079ac45881488ce7a2641abd8c551a4bcdae1a92d6d98da7bd0"
+                      checksum:"60cddfb31b3855b9e971bbc5f4af41540a91992ce584e5fd07f652fe5c97d615"
         ),
         .target(name:"KakaoPartnerSDKUserTarget",
             dependencies: [
@@ -73,7 +73,7 @@ let package = Package(
         ),
         .binaryTarget(name: "KakaoPartnerSDKUser",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKUser_xcframework.zip",
-                      checksum:"b638a14fb702abc532dd7a590b8b25314f26d0fc706897babadf8b7bc99a55be"
+                      checksum:"9b51b56db46fce1c488f754ef265f5727d5fa6feb4d2e70b111265aa07d0e3fc"
         ),
         .target(name: "KakaoPartnerSDKTalkTarget",
             dependencies: [
@@ -84,7 +84,7 @@ let package = Package(
         ),
         .binaryTarget(name: "KakaoPartnerSDKTalk",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKTalk_xcframework.zip",
-                      checksum: "d72f83a07a12e66853b4f4907a88ae8297b8322c67a30cca238b2a950beb8a54"
+                      checksum: "67e71322d78acc30dbee55318f037a780324708f705da83556381dcd80229774"
         ),
         .target(name:"KakaoPartnerSDKLinkTarget",
             dependencies: [
@@ -95,7 +95,7 @@ let package = Package(
         ),
         .binaryTarget(name: "KakaoPartnerSDKLink",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKLink_xcframework.zip",
-                      checksum: "96f7651b6771b747f16f649b6998291dcd1bfcc0bcdb4cd948605209983b9743"
+                      checksum: "a5bf352e861121a2db8320a6ff22659deb40f6913b67055e31b56d890227da2b"
         ),
         .target(name: "KakaoPartnerSDKFriendTarget",
             dependencies: [
@@ -106,7 +106,7 @@ let package = Package(
         ),
         .binaryTarget(name: "KakaoPartnerSDKFriend",
                       url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKFriend_xcframework.zip",
-                      checksum: "aea0f47b5155d9539bc5845cd086ce4a15baea1f5f900a7c4b486d42f52b8854"
+                      checksum: "da10e8443d979bee4db61bf8623729aa729b8974322168d0cfcf0cb182f4be58"
         ) 
     ],
     swiftLanguageVersions: [
