@@ -14,15 +14,15 @@ let package = Package(
         .library(
             name: "KakaoPartnerSDKCommon",
             type: .dynamic,
-            targets: ["KakaoPartnerSDKCommonTarget"]),
+            targets: ["KakaoPartnerSDKCommon"]),
         .library(
             name: "KakaoPartnerSDKAuth",
             type: .dynamic,
-            targets: ["KakaoPartnerSDKAuthTarget"]),
+            targets: ["KakaoPartnerSDKAuth"]),
         .library(
             name: "KakaoPartnerSDKUser",
             type: .dynamic,
-            targets: ["KakaoPartnerSDKUserTarget"]),
+            targets: ["KakaoPartnerSDKUser"]),
         .library(
             name: "KakaoPartnerSDKTalk",
             type: .dynamic,
@@ -30,11 +30,11 @@ let package = Package(
         .library(
             name: "KakaoPartnerSDKLink",
             type: .dynamic,
-            targets: ["KakaoPartnerSDKLinkTarget"]),
+            targets: ["KakaoPartnerSDKLink"]),
         .library(
             name: "KakaoPartnerSDKFriend",
             type: .dynamic,
-            targets: ["KakaoPartnerSDKFriendTarget"])
+            targets: ["KakaoPartnerSDKFriend"])
     ],
     dependencies: [
        .package(name: "KakaoOpenSDK",
