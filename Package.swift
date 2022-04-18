@@ -22,7 +22,7 @@ let package = Package(
             targets: ["KakaoPartnerSDKUser"]),
         .library(
             name: "KakaoPartnerSDKTalk",
-            targets: ["KakaoPartnerSDKTalkTarget"]),
+            targets: ["KakaoPartnerSDKTalk"]),
         .library(
             name: "KakaoPartnerSDKLink",
             targets: ["KakaoPartnerSDKLink"]),
