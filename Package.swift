@@ -13,27 +13,21 @@ let package = Package(
     products: [
         .library(
             name: "KakaoPartnerSDKCommon",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKCommon"]),
         .library(
             name: "KakaoPartnerSDKAuth",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKAuth"]),
         .library(
             name: "KakaoPartnerSDKUser",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKUser"]),
         .library(
             name: "KakaoPartnerSDKTalk",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKTalkTarget"]),
         .library(
             name: "KakaoPartnerSDKLink",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKLink"]),
         .library(
             name: "KakaoPartnerSDKFriend",
-            type: .dynamic,
             targets: ["KakaoPartnerSDKFriend"])
     ],
     dependencies: [
