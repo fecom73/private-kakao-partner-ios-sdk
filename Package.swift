@@ -2,8 +2,19 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 // sdk-version:2.9.2
-
 import PackageDescription
+
+let version = "2.9.2"
+
+var checksums: [String:String] = [:]
+checksums["KakaoPartnerSDKCommon"] = "89ed7dc6fb138d4e477e0053d868116da414e7d698131950ce8dd8d63aa7097b"
+checksums["KakaoPartnerSDKAuth"] = "e66d5d87c3f33863c856a393a98783b088c221c195d1db2d3e90760050f2e158"
+checksums["KakaoPartnerSDKUser"] = "3b6e9c6f62affe50e351b437af5358289984f900c232a37b1d6f890fe01548f3"
+checksums["KakaoPartnerSDKTalk"] = "d7c816dfce33d766fa8c1b7672aa757b38a0e0a141dd993b60fa1b8f3c6e9de7"
+checksums["KakaoPartnerSDKLink"] = "7338ad23be6208d760bcd8d6ff323c2989607cd95844af61cd92f5ff6b59dadb"
+checksums["KakaoPartnerSDKFriend"] = "95bf0bd10fc432d037ad23ebca181bf650561be321e375bb85579ecf54b410d8"
+
+let url = "https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/\(version)"
 
 let package = Package(
     name: "KakaoPartnerSDK",
@@ -30,37 +41,31 @@ let package = Package(
             name: "KakaoPartnerSDKFriend",
             targets: ["KakaoPartnerSDKFriend"])
     ],
-    dependencies: [
-       .package(name: "KakaoOpenSDK",
-                 url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
-                 .exact("2.9.2")
-                )
-    ],
     targets: [
         .binaryTarget(name: "KakaoPartnerSDKCommon",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKCommon_xcframework.zip",
-                      checksum:"a30738fe02a4de972789328e46d01a884d0b9a9a8fcfe19d09379731a98e8748"
-        ),
-        .binaryTarget(name:"KakaoPartnerSDKAuth",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKAuth_xcframework.zip",
-                      checksum:"60cddfb31b3855b9e971bbc5f4af41540a91992ce584e5fd07f652fe5c97d615"
-        ),
+                     url:"\(url)/KakaoPartnerSDKCommon_xcframework.zip",
+                     checksum: checksums["KakaoPartnerSDKCommon"]!
+        ),        
+        .binaryTarget(name: "KakaoPartnerSDKAuth",
+                     url:"\(url)/KakaoPartnerSDKAuth_xcframework.zip",
+                     checksum: checksums["KakaoPartnerSDKAuth"]!
+        ),        
         .binaryTarget(name: "KakaoPartnerSDKUser",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKUser_xcframework.zip",
-                      checksum:"9b51b56db46fce1c488f754ef265f5727d5fa6feb4d2e70b111265aa07d0e3fc"
-        ),
+                      url:"\(url)/KakaoPartnerSDKUser_xcframework.zip",
+                      checksum: checksums["KakaoPartnerSDKUser"]!
+        ),        
         .binaryTarget(name: "KakaoPartnerSDKTalk",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKTalk_xcframework.zip",
-                      checksum: "67e71322d78acc30dbee55318f037a780324708f705da83556381dcd80229774"
-        ),
+                     url:"\(url)/KakaoPartnerSDKTalk_xcframework.zip",
+                     checksum: checksums["KakaoPartnerSDKTalk"]!
+        ),        
         .binaryTarget(name: "KakaoPartnerSDKLink",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKLink_xcframework.zip",
-                      checksum: "a5bf352e861121a2db8320a6ff22659deb40f6913b67055e31b56d890227da2b"
+                     url:"\(url)/KakaoPartnerSDKLink_xcframework.zip",
+                     checksum: checksums["KakaoPartnerSDKLink"]!
         ),
         .binaryTarget(name: "KakaoPartnerSDKFriend",
-                      url:"https://github.com/fecom73/private-kakao-partner-ios-sdk/releases/download/2.9.2/KakaoPartnerSDKFriend_xcframework.zip",
-                      checksum: "da10e8443d979bee4db61bf8623729aa729b8974322168d0cfcf0cb182f4be58"
-        ) 
+                     url:"\(url)/KakaoPartnerSDKFriend_xcframework.zip",
+                     checksum: checksums["KakaoPartnerSDKFriend"]!
+        )
     ],
     swiftLanguageVersions: [
         .v5
