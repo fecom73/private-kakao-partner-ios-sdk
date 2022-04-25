@@ -38,7 +38,10 @@ let package = Package(
             targets: ["KakaoPartnerSDKFriendWrapper"])
     ],
     dependencies: [
-        .package(name:"KakaoOpenSDK", path: "../private-kakao-ios-sdk")
+        .package(name: "KakaoOpenSDK",
+                 url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
+                 .exact(version)
+                )
     ],
     targets: [
         .target(
