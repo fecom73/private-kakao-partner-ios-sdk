@@ -94,13 +94,10 @@ let package = Package(
                 .product(name: "KakaoSDKAuth", package: "KakaoOpenSDK"),
                 .product(name: "KakaoSDKUser", package: "KakaoOpenSDK"),
                 .target(name: "KakaoPartnerSDKCommon"),
-                .target(name: "KakaoPartnerSDKFriend")
+                .target(name: "KakaoPartnerSDKFriend", condition: .when(platforms: [.iOS]))
             ]
         ),
         .binaryTarget(name:"KakaoPartnerSDKFriend",
                       path:"sources/KakaoPartnerSDKFriend/KakaoPartnerSDKFriend.xcframework")
-    ],
-    swiftLanguageVersions: [
-        .v5
     ]
 )
