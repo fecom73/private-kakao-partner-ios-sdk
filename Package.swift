@@ -38,6 +38,9 @@ let package = Package(
             targets: ["KakaoPartnerSDKFriendWrapper"])
     ],
     dependencies: [
+        .package(name: "Alamofire",
+                  url: "https://github.com/Alamofire/Alamofire.git",
+                  Version(5,1,0)..<Version(6,0,0))
         .package(name: "KakaoOpenSDK",
                  url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
                  .exact("2.9.2")
@@ -86,6 +89,9 @@ let package = Package(
         .target(
             name: "KakaoPartnerSDKFriendWrapper",
             dependencies: [
+                .product(name:"Alamofire", package: "Alamofire"),
+                .product(name: "KakaoSDKCommon", package: "KakaoOpenSDK"),
+                .product(name: "KakaoSDKAuth", package: "KakaoOpenSDK"),
                 .product(name: "KakaoSDKUser", package: "KakaoOpenSDK"),
                 .target(name: "KakaoPartnerSDKCommon"),
                 .target(name: "KakaoPartnerSDKFriend")
