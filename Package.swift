@@ -40,7 +40,7 @@ let package = Package(
     dependencies: [
         .package(name: "Alamofire",
                   url: "https://github.com/Alamofire/Alamofire.git",
-                  Version(5,1,0)..<Version(6,0,0))
+                  Version(5,1,0)..<Version(6,0,0)),
         .package(name: "KakaoOpenSDK",
                  url: "https://github.com/fecom73/private-kakao-ios-sdk.git",
                  .exact("2.9.2")
