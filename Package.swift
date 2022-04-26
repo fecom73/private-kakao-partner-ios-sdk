@@ -99,5 +99,8 @@ let package = Package(
         ),
         .binaryTarget(name:"KakaoPartnerSDKFriendStatic",
                       path:"sources/KakaoPartnerSDKFriendStatic/KakaoPartnerSDKFriendStatic.xcframework")
+    ],
+    swiftLanguageVersions: [
+        .v5
     ]
 )
