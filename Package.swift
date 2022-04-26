@@ -34,8 +34,8 @@ let package = Package(
             name: "KakaoPartnerSDKLink",
             targets: ["KakaoPartnerSDKLink"]),
         .library(
-            name: "KakaoPartnerSDKFriend",
-            targets: ["KakaoPartnerSDKFriendWrapper"])
+            name: "KakaoPartnerSDKFriendStatic",
+            targets: ["KakaoPartnerSDKFriendStaticWrapper"])
     ],
     dependencies: [
         .package(name: "Alamofire",
@@ -87,17 +87,17 @@ let package = Package(
             exclude: excludeFiles
         ),
         .target(
-            name: "KakaoPartnerSDKFriendWrapper",
+            name: "KakaoPartnerSDKFriendStaticWrapper",
             dependencies: [
-                .product(name:"Alamofire", package: "Alamofire"),
-                .product(name: "KakaoSDKCommon", package: "KakaoOpenSDK"),
-                .product(name: "KakaoSDKAuth", package: "KakaoOpenSDK"),
+                // .product(name:"Alamofire", package: "Alamofire"),
+                // .product(name: "KakaoSDKCommon", package: "KakaoOpenSDK"),
+                // .product(name: "KakaoSDKAuth", package: "KakaoOpenSDK"),
                 .product(name: "KakaoSDKUser", package: "KakaoOpenSDK"),
                 .target(name: "KakaoPartnerSDKCommon"),
-                .target(name: "KakaoPartnerSDKFriend", condition: .when(platforms: [.iOS]))
+                .target(name: "KakaoPartnerSDKFriendStatic")
             ]
         ),
-        .binaryTarget(name:"KakaoPartnerSDKFriend",
-                      path:"sources/KakaoPartnerSDKFriend/KakaoPartnerSDKFriend.xcframework")
+        .binaryTarget(name:"KakaoPartnerSDKFriendStatic",
+                      path:"sources/KakaoPartnerSDKFriendStatic/KakaoPartnerSDKFriendStatic.xcframework")
     ]
 )
